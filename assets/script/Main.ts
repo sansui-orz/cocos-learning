@@ -72,6 +72,13 @@ export default class Main extends cc.Component {
 		// manager.enabledDrawBoundingBox = true; // 开启碰撞描边
 		// 开启定时器
 		this.startInterval();
+
+		// 将场景this保存到PLayer内
+		const Player = this.player.getComponent('Player');
+		if (Player) {
+			Player.scene = this;
+		}
+
 	}
 
 	GameOver(): void {
@@ -162,6 +169,8 @@ export default class Main extends cc.Component {
 		}
 		this.diciArray.push(dici);
 		this.node.addChild(dici);
+		dici.zIndex = 10;
+		// this.node.zIndex = 99;
 	}
 
 	diciDrection(node: cc.Node, random: number): void {

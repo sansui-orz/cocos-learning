@@ -571,7 +571,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 131.11,
+      "width": 186.72,
       "height": 50.4
     },
     "_anchorPoint": {
@@ -616,8 +616,8 @@
     "_enabled": true,
     "_materials": [],
     "_useOriginalSize": false,
-    "_string": "倒计时:",
-    "_N$string": "倒计时:",
+    "_string": "倒计时: 60",
+    "_N$string": "倒计时: 60",
     "_fontSize": 40,
     "_lineHeight": 40,
     "_enableWrapText": true,
@@ -643,7 +643,7 @@
     "alignMode": 1,
     "_target": null,
     "_alignFlags": 9,
-    "_left": 60,
+    "_left": 32.19500000000001,
     "_right": 0,
     "_top": 30,
     "_bottom": 0,
@@ -807,11 +807,19 @@
     "dici": {
       "__uuid__": "94b672ea-0e80-4dd3-95eb-30bba8429c49"
     },
+    "timeLabel": {
+      "__id__": 14
+    },
+    "scoreLabel": {
+      "__id__": 17
+    },
     "playerJumpHeight": 30,
     "wallWidth": 80,
     "jumpSpeed": 0.3,
     "diciArray": [],
     "lock": false,
+    "time": 60,
+    "score": 0,
     "_id": "57JHx98u1Mvod//7fh8Ts7"
   }
 ]

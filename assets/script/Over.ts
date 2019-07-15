@@ -22,12 +22,15 @@ export default class NewClass extends cc.Component {
     @property(cc.Node)
     Btn: cc.Node = null;
 
+    @property(cc.Label)
+    scoreLabel: cc.Label = null;
+
     onLoad () {
         cc.director.preloadScene('Main');
         this.Btn.on('touchstart', function() {
             cc.director.loadScene('Main');
         });
-        console.log(window.Global);
+        this.scoreLabel.string = '最终得分：' + window.Global.score;
     }
 
     // update (dt) {}

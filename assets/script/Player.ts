@@ -22,6 +22,7 @@ window.Global = { score: 0 };
 export default class Player extends cc.Component {
 
     // LIFE-CYCLE CALLBACKS:
+    scene: any = null;
 
     onLoad () {
     }
@@ -31,10 +32,7 @@ export default class Player extends cc.Component {
     }
 
     onCollisionEnter(): void {
-        // window.Global = { score: 10 };
-        // cc.director.loadScene('Over');
-        // this.node.parent.GameOver();
-
+        this.scene.GameOver();
     }
 
     // update (dt) {}
