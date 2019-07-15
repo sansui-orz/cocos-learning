@@ -7,7 +7,7 @@
 // Learn life-cycle callbacks:
 //  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/life-cycle-callbacks.html
 //  - [English] http://www.cocos2d-x.org/docs/creator/manual/en/scripting/life-cycle-callbacks.html
-// const Main = require('Main');
+
 const {ccclass, property} = cc._decorator;
 
 interface IGlobal {
@@ -16,25 +16,18 @@ interface IGlobal {
 
 declare var window: Window & { Global: IGlobal };
 
-window.Global = { score: 0 };
-
 @ccclass
-export default class Player extends cc.Component {
+export default class NewClass extends cc.Component {
 
-    // LIFE-CYCLE CALLBACKS:
+    @property(cc.Node)
+    Btn: cc.Node = null;
 
     onLoad () {
-    }
-
-    start () {
-
-    }
-
-    onCollisionEnter(): void {
-        // window.Global = { score: 10 };
-        // cc.director.loadScene('Over');
-        // this.node.parent.GameOver();
-
+        cc.director.preloadScene('Main');
+        this.Btn.on('touchstart', function() {
+            cc.director.loadScene('Main');
+        });
+        console.log(window.Global);
     }
 
     // update (dt) {}
