@@ -32,6 +32,9 @@ export default class Main extends cc.Component {
 	@property(cc.Label)
 	scoreLabel: cc.Label = null;
 
+	@property(cc.AudioClip)
+	jumpAudio: cc.AudioClip = null;
+
 	@property
 	private playerJumpHeight: number = 30;
 
@@ -79,6 +82,9 @@ export default class Main extends cc.Component {
 			Player.scene = this;
 		}
 
+		// 将分数的层级放到最高
+		this.timeLabel.node.zIndex = 99;
+		this.scoreLabel.node.zIndex = 99;
 	}
 
 	GameOver(): void {
@@ -113,6 +119,10 @@ export default class Main extends cc.Component {
 			this.scoreLabel.string = '' + this.score;
 			this.lock = false;
 		}, this, null);
+
+		// 播放音效
+		cc.audioEngine.playEffect(this.jumpAudio, false);
+
 		if (<number>x > this.node.width / 2) {
 			this.moveRight(finished);
 		} else {
@@ -161,6 +171,7 @@ export default class Main extends cc.Component {
 	createDici(onBottom: boolean): void {
 		const random: number = Math.random();
 		const dici: cc.Node = cc.instantiate(this.dici);
+		// dici.zIndex = 99;
 		this.diciDrection(dici, random);
 		if (onBottom) {
 			dici.y = -this.node.height / 2 - 200 + 200 * random;
@@ -168,9 +179,8 @@ export default class Main extends cc.Component {
 			dici.y = 200 - this.diciArray.length * 200;
 		}
 		this.diciArray.push(dici);
-		this.node.addChild(dici);
-		dici.zIndex = 10;
-		// this.node.zIndex = 99;
+
+		this.node.addChild(dici, 10);
 	}
 
 	diciDrection(node: cc.Node, random: number): void {

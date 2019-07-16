@@ -89,6 +89,9 @@
       },
       {
         "__id__": 20
+      },
+      {
+        "__id__": 21
       }
     ],
     "_prefab": null,
@@ -813,6 +816,9 @@
     "scoreLabel": {
       "__id__": 17
     },
+    "jumpAudio": {
+      "__uuid__": "a834f01b-df20-409a-ad59-d11acc44296b"
+    },
     "playerJumpHeight": 30,
     "wallWidth": 80,
     "jumpSpeed": 0.3,
@@ -821,5 +827,23 @@
     "time": 60,
     "score": 0,
     "_id": "57JHx98u1Mvod//7fh8Ts7"
+  },
+  {
+    "__type__": "cc.AudioSource",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 2
+    },
+    "_enabled": true,
+    "_clip": {
+      "__uuid__": "f161c83a-1d4d-4579-b87a-6c60f928015c"
+    },
+    "_volume": 1,
+    "_mute": false,
+    "_loop": true,
+    "playOnLoad": true,
+    "preload": true,
+    "_id": "42nV/tfz9AMY3JCVAcV2UG"
   }
 ]

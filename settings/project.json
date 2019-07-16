@@ -26,8 +26,8 @@
       false
     ]
   ],
-  "design-resolution-height": 640,
-  "design-resolution-width": 960,
+  "design-resolution-height": 960,
+  "design-resolution-width": 640,
   "excluded-modules": [],
   "facebook": {
     "appID": "",
@@ -47,13 +47,13 @@
     "Player",
     "dici"
   ],
-  "last-module-event-record-time": 0,
+  "last-module-event-record-time": 1563268669379,
   "simulator-orientation": false,
   "simulator-resolution": {
     "height": 640,
     "width": 960
   },
+  "start-scene": "current",
   "use-customize-simulator": true,
-  "use-project-simulator-setting": false,
-  "start-scene": "current"
+  "use-project-simulator-setting": false
 }
